@@ -12,6 +12,7 @@
 		A76A1ED51BE76D1100BC2311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED31BE76D1100BC2311 /* Main.storyboard */; };
 		A76A1ED71BE76D1100BC2311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED61BE76D1100BC2311 /* Assets.xcassets */; };
 		A76A1EDA1BE76D1100BC2311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED81BE76D1100BC2311 /* LaunchScreen.storyboard */; };
+		A7C9E9341BE7C3F700AB19CB /* f7157ff6897dbca7aed808d5637ab5f0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7C9E9331BE7C3F700AB19CB /* f7157ff6897dbca7aed808d5637ab5f0.mp3 */; };
 		C1ACA418EE6CC0ECD2F22D04 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C13DED076EF81193A8471 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		A76A1ED91BE76D1100BC2311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A76A1EDB1BE76D1100BC2311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7C9E9311BE775E400AB19CB /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A7C9E9331BE7C3F700AB19CB /* f7157ff6897dbca7aed808d5637ab5f0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = f7157ff6897dbca7aed808d5637ab5f0.mp3; sourceTree = "<group>"; };
 		CA9167FAEA0533A966FA9A85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		A76A1ECE1BE76D1100BC2311 /* Fritoysabri */ = {
 			isa = PBXGroup;
 			children = (
+				A7C9E9321BE7C3E100AB19CB /* Sounds */,
 				A76A1ECF1BE76D1100BC2311 /* AppDelegate.swift */,
 				A7C9E9311BE775E400AB19CB /* BridgingHeader.h */,
 				A76A1ED11BE76D1100BC2311 /* ViewController.swift */,
@@ -88,6 +91,14 @@
 				A76A1EDB1BE76D1100BC2311 /* Info.plist */,
 			);
 			path = Fritoysabri;
+			sourceTree = "<group>";
+		};
+		A7C9E9321BE7C3E100AB19CB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A7C9E9331BE7C3F700AB19CB /* f7157ff6897dbca7aed808d5637ab5f0.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C9E9341BE7C3F700AB19CB /* f7157ff6897dbca7aed808d5637ab5f0.mp3 in Resources */,
 				A76A1EDA1BE76D1100BC2311 /* LaunchScreen.storyboard in Resources */,
 				A76A1ED71BE76D1100BC2311 /* Assets.xcassets in Resources */,
 				A76A1ED51BE76D1100BC2311 /* Main.storyboard in Resources */,
