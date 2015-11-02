@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loginButton = FBSDKLoginButton.init()
+        loginButton.center = self.view.center;
+        self.view.addSubview(loginButton)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
