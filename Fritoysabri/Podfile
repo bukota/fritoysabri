@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod "FBSDKCoreKit", "~> 4.7.1"
+pod "FBSDKLoginKit", "~> 4.7.1"
+pod "FBSDKShareKit", "~> 4.7.1"
+
+

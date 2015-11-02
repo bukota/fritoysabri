@@ -12,9 +12,12 @@
 		A76A1ED51BE76D1100BC2311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED31BE76D1100BC2311 /* Main.storyboard */; };
 		A76A1ED71BE76D1100BC2311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED61BE76D1100BC2311 /* Assets.xcassets */; };
 		A76A1EDA1BE76D1100BC2311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76A1ED81BE76D1100BC2311 /* LaunchScreen.storyboard */; };
+		C1ACA418EE6CC0ECD2F22D04 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C13DED076EF81193A8471 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A8E11D8C8C63BEEB5103C69 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		823C13DED076EF81193A8471 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76A1ECC1BE76D1100BC2311 /* Fritoysabri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fritoysabri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76A1ECF1BE76D1100BC2311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76A1ED11BE76D1100BC2311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A76A1ED61BE76D1100BC2311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A76A1ED91BE76D1100BC2311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A76A1EDB1BE76D1100BC2311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9167FAEA0533A966FA9A85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1ACA418EE6CC0ECD2F22D04 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13AD7BEA95DE8D1123329FE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				823C13DED076EF81193A8471 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		515CA92168C543E7ABA6EA37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA9167FAEA0533A966FA9A85 /* Pods.debug.xcconfig */,
+				2A8E11D8C8C63BEEB5103C69 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A76A1EC31BE76D1100BC2311 = {
 			isa = PBXGroup;
 			children = (
 				A76A1ECE1BE76D1100BC2311 /* Fritoysabri */,
 				A76A1ECD1BE76D1100BC2311 /* Products */,
+				515CA92168C543E7ABA6EA37 /* Pods */,
+				13AD7BEA95DE8D1123329FE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A76A1EDE1BE76D1100BC2311 /* Build configuration list for PBXNativeTarget "Fritoysabri" */;
 			buildPhases = (
+				128CFA0F243BD676EE61E6B5 /* Check Pods Manifest.lock */,
 				A76A1EC81BE76D1100BC2311 /* Sources */,
 				A76A1EC91BE76D1100BC2311 /* Frameworks */,
 				A76A1ECA1BE76D1100BC2311 /* Resources */,
+				262DFC921F26769259129A5A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		128CFA0F243BD676EE61E6B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		262DFC921F26769259129A5A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A76A1EC81BE76D1100BC2311 /* Sources */ = {
@@ -245,6 +304,7 @@
 		};
 		A76A1EDF1BE76D1100BC2311 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA9167FAEA0533A966FA9A85 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fritoysabri/Info.plist;
@@ -256,6 +316,7 @@
 		};
 		A76A1EE01BE76D1100BC2311 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8E11D8C8C63BEEB5103C69 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fritoysabri/Info.plist;
@@ -284,6 +345,7 @@
 				A76A1EE01BE76D1100BC2311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
