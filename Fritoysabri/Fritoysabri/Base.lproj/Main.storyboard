@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frito y sabri" translatesAutoresizingMaskIntoConstraints="NO" id="cff-Vn-5LO">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cff-Vn-5LO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2nG-Uj-YYv"/>
+                            <constraint firstItem="cff-Vn-5LO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="EcG-Yj-pU9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cff-Vn-5LO" secondAttribute="bottom" id="QYy-U2-TYr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cff-Vn-5LO" secondAttribute="trailing" id="cXf-wR-xXC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="277"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Frito y sabri" width="1248" height="1656"/>
+    </resources>
 </document>
